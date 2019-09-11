@@ -44,7 +44,7 @@ def downm3u8(m3u8_url, name, directory, t_num):
     for line in lines:
         if 'AES-128' in line:
             key_url = pre + line.split('"')[1].split('/')[-1]
-    key = requests.get(key_url).content
+            key = requests.get(key_url).content
     n = len(ts_list)
     count = [0]
     dict = {}
